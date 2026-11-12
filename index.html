@@ -208,7 +208,7 @@
             color: var(--text-muted);
         }
 
-        /* Faaliyet Alanları (Kartlar) */
+        /* Kartlar Grid */
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -244,7 +244,29 @@
             font-size: 0.95rem;
         }
 
-        /* Yönetim Kurulu */
+        /* Kurumsal Departmanlar Özel Stili */
+        .dept-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 2.2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            border-top: 4px solid var(--teal);
+        }
+
+        .dept-code {
+            font-size: 0.75rem;
+            background: #e0f2fe;
+            color: #0369a1;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-weight: 700;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        /* Yönetim Kurulu / Ekip */
         .team-card {
             background: white;
             border: 1px solid #e2e8f0;
@@ -286,7 +308,7 @@
             border-radius: 16px;
             padding: 3rem;
             text-align: center;
-            margin-top: 2rem;
+            margin-top: 4rem;
         }
 
         .invest-box h3 {
@@ -305,7 +327,7 @@
             font-size: 1.1rem;
         }
 
-        /* Alt Bilgi (Footer & Parodi Açıklaması) */
+        /* Alt Bilgi (Footer) */
         footer {
             background: #07192c;
             color: #94a3b8;
@@ -359,7 +381,6 @@
     <!-- Üst Menü -->
     <header>
         <a href="#" class="logo-container">
-            <!-- Özel Vektör Logo -->
             <svg width="42" height="42" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M50 8L85 26V58C85 76 50 92 50 92C50 92 15 76 15 58V26L50 8Z" stroke="#0a2540" stroke-width="7" stroke-linejoin="round"/>
                 <path d="M26 56L40 42L52 52L76 26" stroke="#147d8c" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
@@ -372,10 +393,10 @@
         </a>
         <nav>
             <ul>
-                <li><a href="#vizyon">Vizyonumuz</a></li>
-                <li><a href="#faaliyetler">Faaliyet Alanları</a></li>
-                <li><a href="#yonetim">Yönetim Kurulu</a></li>
-                <li><a href="#yatirim">Yatırımcı İlişkileri</a></li>
+                <li><a href="#departmanlar">Departmanlar</a></li>
+                <li><a href="#faaliyetler">Operasyonlar</a></li>
+                <li><a href="#yonetim">İcra Kurulu</a></li>
+                <li><a href="#yatirim">Hisse Senedi</a></li>
             </ul>
         </nav>
     </header>
@@ -386,8 +407,8 @@
         <h2>Geleceğin Mallarını Bugünden İnşa Ediyoruz.</h2>
         <p>Küresel vizyonumuz, sıfır sermayemiz ve WhatsApp grubumuzdaki bitmek bilmeyen boş muhabbetlerimizle sektöre yön veriyoruz.</p>
         <div class="btn-group">
-            <a href="#faaliyetler" class="btn btn-primary">Faaliyetlerimizi İncele</a>
-            <button class="btn btn-secondary" onclick="showEmergencyAlert()">Acil Toplantı Çağrısı</button>
+            <a href="#departmanlar" class="btn btn-primary">Kurumsal Yapıyı İncele</a>
+            <button class="btn btn-secondary" onclick="showEmergencyAlert()">Acil İcra Toplantısı</button>
         </div>
     </div>
 
@@ -411,32 +432,47 @@
         </div>
     </div>
 
-    <!-- Vizyonumuz -->
-    <section id="vizyon">
+    <!-- KURUMSAL DEPARTMANLAR (İstediğin Profesyonel Görünümlü Mizah) -->
+    <section id="departmanlar">
         <div class="section-title">
-            <h2>Kurumsal Vizyon & Misyon</h2>
-            <p>Hiçbir şey yapmadan her şeyi başarmış gibi görünme sanatı</p>
+            <h2>Kurumsal Organizasyon & Departmanlar</h2>
+            <p>Şirketimizin kusursuz işleyişini sağlayan stratejik birimlerimiz</p>
         </div>
         <div class="grid">
-            <div class="card">
-                <div class="card-icon">🚀</div>
-                <h3>Sürdürülebilir Sallamasyon</h3>
-                <p>Henüz ortada hiçbir plan yokken bile varmış gibi davranarak rakiplerimizin psikolojisini bozuyoruz.</p>
+            <div class="dept-card">
+                <span class="dept-code">DEPT-01 // Operasyon</span>
+                <h3 style="color: var(--navy); margin-bottom: 0.8rem;">Görüldü ve İletişim Müdürlüğü</h3>
+                <p>Gruba atılan mesajları saniyeler içinde okuyup zerre kadar cevap vermeme, mavi tik bırakıp gizemli görünme süreçlerini yönetir.</p>
             </div>
-            <div class="card">
-                <div class="card-icon">📈</div>
-                <h3>Agresif Büyüme Stratejisi</h3>
-                <p>Logomuzdaki yukarı yönlü ok gibi, hayat standartlarımız hariç her türlü grafiği yukarı doğru çiziyoruz.</p>
+            <div class="dept-card">
+                <span class="dept-code">DEPT-02 // Hukuk & Savunma</span>
+                <h3 style="color: var(--navy); margin-bottom: 0.8rem;">Son Dakika Bahane Üretim Başkanlığı</h3>
+                <p>Buluşmalara 10 dakika kala "Kanka evden çıktım ama otobüs bozuldu / karnım ağrıdı" gibi kritik mazeretleri hukuki bir titizlikle hazırlar.</p>
             </div>
-            <div class="card">
-                <div class="card-icon">🤝</div>
-                <h3>Global Makara Ağı</h3>
-                <p>Grup sohbetine atılan her mesajı kurumsal bir kriz veya dev bir yatırım fırsatına dönüştürüyoruz.</p>
+            <div class="dept-card">
+                <span class="dept-code">DEPT-03 // Finans & Strateji</span>
+                <h3 style="color: var(--navy); margin-bottom: 0.8rem;">"IBAN'ı Atıyorum" Genel Müdürlüğü</h3>
+                <p>Ortak harcamalardan sonra masayı bölüşme, kusuratları başkasına kilitletme ve "Benim kartta para kalmamış ya" algoritmalarını optimize eder.</p>
+            </div>
+            <div class="dept-card">
+                <span class="dept-code">DEPT-04 // Dijital Medya</span>
+                <h3 style="color: var(--navy); margin-bottom: 0.8rem;">Gece Mesaisi & Boş Yapma Birimi</h3>
+                <p>Gece saat 03:00'te uykudaki üyelerin bildirim paneline en az 45 adet TikTok videosu ve rastgele meme pompalanmasını sağlar.</p>
+            </div>
+            <div class="dept-card">
+                <span class="dept-code">DEPT-05 // Ar-Ge</span>
+                <h3 style="color: var(--navy); margin-bottom: 0.8rem;">Boş Planlama ve Hayal Departmanı</h3>
+                <p>Asla gerçekleştirilmeyecek devasa tatil planları, yazlık ev projeleri ve "Yazın kesin tatile gidiyoruz" toplantıları düzenler.</p>
+            </div>
+            <div class="dept-card">
+                <span class="dept-code">DEPT-06 // İnsan Kaynakları</span>
+                <h3 style="color: var(--navy); margin-bottom: 0.8rem;">Gruptan Atma & Ban Komitesi</h3>
+                <p>Gereksiz sesli arama yapanları, buluşmaya ekilenleri ve gruba uzun süre yazmayanları disiplin kuruluna sevk eder.</p>
             </div>
         </div>
     </section>
 
-    <!-- Faaliyet Alanları -->
+    <!-- Stratejik Faaliyet Alanları -->
     <section id="faaliyetler" style="background: var(--light-bg); max-width: 100%; padding: 5rem 5%;">
         <div style="max-width: 1200px; margin: 0 auto;">
             <div class="section-title">
@@ -446,18 +482,18 @@
             <div class="grid">
                 <div class="team-card" style="text-align: left;">
                     <span class="role">Ar-Ge & İnovasyon</span>
-                    <h3>Son Dakika Plan İptali Teknolojileri</h3>
-                    <p style="color: var(--text-muted); margin-top: 0.5rem;">Buluşmaya 5 dakika kala "Benim işim çıktı" deme konusunda geliştirdiğimiz yapay zeka destekli bahaneler.</p>
+                    <h3>Sürdürülebilir Sallamasyon</h3>
+                    <p style="color: var(--text-muted); margin-top: 0.5rem;">Henüz ortada hiçbir plan yokken bile varmış gibi davranarak rakiplerimizin psikolojisini bozuyoruz.</p>
                 </div>
                 <div class="team-card" style="text-align: left;">
                     <span class="role">Lojistik & Tedarik</span>
-                    <h3>"Kanka Sen Öde Ben Atarım" Finansmanı</h3>
-                    <p style="color: var(--text-muted); margin-top: 0.5rem;">Geri dönüşü yüzyıllar süren mikro kredi modelleriyle arkadaşlar arası ekonomiyi canlı tutuyoruz.</p>
+                    <h3>Agresif Büyüme Stratejisi</h3>
+                    <p style="color: var(--text-muted); margin-top: 0.5rem;">Logomuzdaki yukarı yönlü ok gibi, hayat standartlarımız hariç her türlü grafiği yukarı doğru çiziyoruz.</p>
                 </div>
                 <div class="team-card" style="text-align: left;">
-                    <span class="role">Dijital Medya</span>
-                    <h3>Gece 03:00 Reel & Meme İhracatı</h3>
-                    <p style="color: var(--text-muted); margin-top: 0.5rem;">Uyuyan grup üyelerinin bildirim kutusunu sabah okunmak üzere 47 adet videoyla dolduruyoruz.</p>
+                    <span class="role">Global Ağ</span>
+                    <h3>Global Makara Ağı</h3>
+                    <p style="color: var(--text-muted); margin-top: 0.5rem;">Grup sohbetine atılan her mesajı kurumsal bir kriz veya dev bir yatırım fırsatına dönüştürüyoruz.</p>
                 </div>
             </div>
         </div>
@@ -466,7 +502,7 @@
     <!-- Yönetim Kurulu -->
     <section id="yonetim">
         <div class="section-title">
-            <h2>Yönetim Kurulu</h2>
+            <h2>İcra Kurulu (Yönetim)</h2>
             <p>Şirketimizi zirveye (veya en yakın çiğ köfteciye) taşıyan lider kadro</p>
         </div>
         <div class="grid">
@@ -512,7 +548,6 @@
             </div>
         </div>
 
-        <!-- İstediğin Mizahi Yasal Açıklama Bölümü -->
         <div class="disclaimer-box">
             <strong>YASAL UYARI VE BİLGİLENDİRME:</strong> Bu web sitesi ve "Mallar A.Ş. (Mallar Anonim Şirketi)" unvanı tamamen bir arkadaş grubu arasındaki mizah, eğlence ve parodi amacıyla oluşturulmuştur. Ticaret Sicil Gazetesi'nde kayıtlı gerçek bir şirket, holding veya ticari kuruluş değildir; herhangi bir ticari faaliyet, yatırım tavsiyesi veya hukuki bağlayıcılığı bulunmamaktadır.
         </div>
@@ -531,7 +566,7 @@
         }
 
         function showEmergencyAlert() {
-            alert("📢 MALLAR A.Ş. ACİL DURUM BİLDİRİMİ:\n\nYönetim kurulu olağanüstü toplandı. Gündem maddesi: 'Akşam ne yiyoruz?'");
+            alert("📢 MALLAR A.Ş. ACİL İCRA TOPLANTISI:\n\nYönetim kurulu olağanüstü toplandı. Gündem maddesi: 'Akşam nerede toplanıyoruz ve hesabı kim kitleyecek?'");
         }
     </script>
 </body>
